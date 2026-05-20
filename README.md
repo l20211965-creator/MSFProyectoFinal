@@ -3,9 +3,13 @@
 
 # Proyecto Final : “Representación del Asma mediante un Circuito Eléctrico RLC”
 
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/6682b132-ff02-4c44-ac13-fd3540e2df28" />
+
 ## Información de la estudiante
 
 Pamela Escobedo Sandoval - l20211965@tectijuana.edu.mx
+
+Alan Omar Garcia Toledo - Alan.garciat201@tectijuana.edu.mx
 
 Modelado de Sistemas Fisiológicos
 
@@ -16,7 +20,7 @@ Ingeniería Biomédica
 Dr. Paul Antonio Valle Trujillo; paul.valle@tectijuana.edu.mx
 
 Departamento de Ingeniería Eléctrica y Electrónica, Tecnológico Nacional de México/IT Tijuana, Blvd. Alberto Limón Padilla s/n, Tijuana, C.P. 22454, B.C., México.
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/6682b132-ff02-4c44-ac13-fd3540e2df28" />
+
 
 
 ## Descripción detallada del sistema
