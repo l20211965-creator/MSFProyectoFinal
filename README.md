@@ -17,6 +17,35 @@ Dr. Paul Antonio Valle Trujillo; paul.valle@tectijuana.edu.mx
 
 Departamento de Ingeniería Eléctrica y Electrónica, Tecnológico Nacional de México/IT Tijuana, Blvd. Alberto Limón Padilla s/n, Tijuana, C.P. 22454, B.C., México.
 
+
+## Descripción detallada del sistema
+
+El sistema respiratorio permite el intercambio de gases mediante el movimiento de aire a
+través de las vías respiratorias y los pulmones. Esta dinámica puede representarse de
+forma simplificada mediante un circuito eléctrico de segundo orden, modelando los procesos
+de flujo de aire, resistencia pulmonar y elasticidad respiratoria bajo las siguientes
+suposiciones:
+1. La presión respiratoria generada durante la inspiración se modela mediante una fuente de
+voltaje de entrada Ve(t), que representa el estímulo inicial del sistema respiratorio
+encargado de impulsar el flujo de aire hacia los pulmones.
+2. El flujo de aire a través de las vías respiratorias principales se modela mediante una
+resistencia R, asociada a la oposición al paso del aire en estructuras como la tráquea y los
+bronquios principales.
+3. La inercia del aire en movimiento se representa mediante una inductancia L, la cual
+modela la dificultad que presenta el sistema respiratorio para modificar rápidamente la
+velocidad del flujo de aire debido a la masa del aire y la dinámica pulmonar.
+4. El almacenamiento temporal de aire dentro de los pulmones se representa mediante un
+capacitor C, asociado al cumplimiento pulmonar (compliance), es decir, a la capacidad
+elástica del pulmón para expandirse y almacenar aire durante la inspiración.
+5. La resistencia de las vías respiratorias periféricas se modela mediante una segunda
+resistencia Rp, la cual representa la oposición al flujo de aire en bronquiolos y vías
+respiratorias pequeñas, siendo el principal sitio de obstrucción en enfermedades
+respiratorias como el asma o la EPOC.
+6. Se identifican los siguientes dos flujos en el sistema: el flujo de entrada de aire Ie(t), que
+circula desde la fuente de entrada hacia el sistema respiratorio, y el flujo de salida o
+distribución Is(t), asociado a la respuesta respiratoria efectiva en los pulmones.
+
+
 ## Descripción de la asignatura
 
 El modelizado de sistemas fisiológicos es una herramienta importante en Ingeniería Biomédica, permite comprender el funcionamiento del cuerpo humano, así como diseñar y evaluar terapias y dispositivos médicos; se define como el proceso de formular modelos matemáticos o computacionales que representan el comportamiento y la interacción de los sistemas biológicos y fisiológicos. Esta asignatura pretende aportar al perfil del Ingeniero Biomédico la capacidad de realizar investigación científica en el área de Biología de Sistemas con la finalidad de dirigir y participar en equipos de trabajo interdisciplinarios en contextos nacionales e internacionales, así como de proporcionar soluciones informáticas para resolver problemas en el campo de la Ingeniería Biomédica con ética profesional; lo anterior al proporcionar al estudiante bases sólidas para modelizar sistemas y diseñar controladores para la solución de problemas en las áreas de atención médica y del sector industrial médico. La construcción de analogías entre circuitos eléctricos y sistemas fisiológicos para la formulación de modelos matemáticos y el diseño de controladores mediante la experimentación in silico brindan herramientas de gran aplicación en el quehacer profesional del Ingeniero Biomédico.
@@ -32,15 +61,7 @@ La asignatura de Modelado de Sistemas Fisiológicos forma parte del plan de estu
 5. Sintonizar las ganancias de un controlador PID para eliminar el error entre la entrada y la salida del sistema normotenso-hipotenso y normotenso-hipertenso.
 6. Obtener la respuesta en lazo abierto y en lazo cerrado con el controlador PID en Spyder/Python con la función de transferencia.
 
-## Descripción detallada del sistema
 
-El modelo de Windkessel de cuatro elementos contiene dos elementos dinámicos. Por lo tanto, se necesitan dos estados para describir la dinámica. El vector de estados se conforma por las variables FL(t) denotando el flujo a través de la inercia arterial total, y la variable Pp(t) representando la presión sobre la distensibilidad arterial. Entonces, asumiendo Pa(t) como la presión arterial de entrada, y en consecuencia a Fa(t) como el flujo hacia la aorta o arteria pulmonar. Los parámetros son Z, C, R y L, que representan respectivamente la impedancia característica del lecho vascular pulmonar (aorta y arteria pulmonar), la distensibilidad aérea total, la resistencia periférica y la inertancia arterial. Este modelo tiene muchas ventajas importantes, por ejemplo:
-
-1\. Su sencillez, unos pocos elementos interconectados son suficientes para reproducir la dinámica principal del sistema cardiovascular.
-
-2\. Existe una clara analogía entre los elementos eléctricos y los componentes hidráulicos implicados en el efecto Windkessel. En consecuencia, se relacionan fácilmente con el significado hemodinámico y el acoplamiento ventrículo-arterial.
-
-Palabras clave:sistema cardivalcular, hipotenso, hipertenso, PID, Controlador, sistema.
 
 ## Lista de archivos incluidos en el repositorio
 
