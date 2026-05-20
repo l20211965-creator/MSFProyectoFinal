@@ -1,2 +1,2 @@
-# MSFProyectoFinal “Representación del Asma mediante un Circuito Eléctrico RLC”
+# MSF:ProyectoFinal
 Proyecto FInal : “Representación del Asma mediante un Circuito Eléctrico RLC”
