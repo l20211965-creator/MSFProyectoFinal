@@ -1,7 +1,7 @@
 [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=l20211965-creator/MSFPractica2)
 
 
-# Práctica: Sistema cardiovascular
+# Proyecto Final : “Representación del Asma mediante un Circuito Eléctrico RLC”
 
 ## Información de la estudiante
 
