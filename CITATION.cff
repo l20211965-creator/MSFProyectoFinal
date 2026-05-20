@@ -2,7 +2,7 @@
 # Visit https://bit.ly/cffinit to generate yours today!
 
 cff-version: 1.2.0
-title: ' Practica 2 Sistema Cardiovascular '
+title: ' Proyecto final: “Representación del Asma mediante un Circuito Eléctrico RLC” '
 message: 'Modelado de sistemas fisiologicos / Ingenieria Biomedica '
 type: software
 authors:
@@ -12,16 +12,16 @@ authors:
     affiliation: Instituto tecnologico de tijuana
 identifiers:
   - type: url
-    value: 'https://github.com/l20211965-creator/MSFPractica2'
+    value: 'https://github.com/l20211965-creator/MSFProyectoFinal'
     description: Repositorio Git Hub
-repository-code: 'https://github.com/l20211965-creator/MSFPractica2'
-url: 'https://github.com/l20211965-creator/MSFPractica2'
+repository-code: 'https://github.com/l20211965-creator/MSFProyectoFinal'
+url: 'https://github.com/l20211965-creator/MSFProyectoFinal
 keywords:
-  - Hipotenso
-  - Hipertenso
-  - control
-  - sistema
-  - 'controlador '
+  - Pulmones
+  - Respiracion
+  - Presión pulmonar
+  - Intercambio gaseoso
+  - 'Oxigenación '
 license: BSD-2-Clause
 version: '1.0'
-date-released: '2026-03-26'
+date-released: '2026-05-19'
