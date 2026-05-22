@@ -73,17 +73,17 @@ distribución Is(t), asociado a la respuesta respiratoria efectiva en los pulmon
 
 
 
-<img width="663" height="601" alt="Captura de pantalla 2026-05-22 162619" src="https://github.com/user-attachments/assets/134be0c0-5ab8-4f48-80eb-9fe4040b737d" />
+<img width="863" height="601" alt="Captura de pantalla 2026-05-22 162619" src="https://github.com/user-attachments/assets/134be0c0-5ab8-4f48-80eb-9fe4040b737d" />
 
-<img width="663" height="601" alt="image" src="https://github.com/user-attachments/assets/f67fd78a-d62c-4c4b-968b-6cac4dc56c52" />
+<img width="563" height="601" alt="image" src="https://github.com/user-attachments/assets/f67fd78a-d62c-4c4b-968b-6cac4dc56c52" />
 
-<img width="663" height="601" alt="image" src="https://github.com/user-attachments/assets/e498d248-af3b-484f-a532-c2e81f9741a9" />
+<img width="563" height="601" alt="image" src="https://github.com/user-attachments/assets/e498d248-af3b-484f-a532-c2e81f9741a9" />
 
-<img width="663" height="601" alt="image" src="https://github.com/user-attachments/assets/f45e6c3b-b8f6-42b1-a7e6-764bf53afb6d" />
+<img width="563" height="601" alt="image" src="https://github.com/user-attachments/assets/f45e6c3b-b8f6-42b1-a7e6-764bf53afb6d" />
 
-<img width="663" height="601" alt="image" src="https://github.com/user-attachments/assets/d1ffb9ce-0558-427a-bbdd-bd025297385c" />
+<img width="563" height="601" alt="image" src="https://github.com/user-attachments/assets/d1ffb9ce-0558-427a-bbdd-bd025297385c" />
 
-<img width="663" height="601" alt="image" src="https://github.com/user-attachments/assets/bf5faed8-d6ea-4c24-a4ce-d19e4014ebdc" />
+<img width="563" height="601" alt="image" src="https://github.com/user-attachments/assets/bf5faed8-d6ea-4c24-a4ce-d19e4014ebdc" />
 
 ## Lista de archivos incluidos en el repositorio
 
