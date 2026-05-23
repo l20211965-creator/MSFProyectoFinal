@@ -74,34 +74,15 @@ distribución Is(t), asociado a la respuesta respiratoria efectiva en los pulmon
 
 
 <img width="863" height="601" alt="Captura de pantalla 2026-05-22 162619" src="https://github.com/user-attachments/assets/134be0c0-5ab8-4f48-80eb-9fe4040b737d" /><br>
-# Cálculos del Sistema Respiratorio
-## Modelo Eléctrico
-
----
-
-# Función de transferencia general
-
-$$
-\frac{V_s(s)}{V_e(s)} = \frac{s^2 + s}{a s^2 + b s + c}
-$$
-
----
-
-# Ecuaciones en el dominio del tiempo
-
-## Ecuación de la malla de entrada
+# Modelo Matemático del Sistema
 
 $$
 V_e(t) = R\, i_1(t) + L \frac{di_1(t)}{dt}+ \frac{1}{C} \int \left[i_1(t) - i_2(t)\right] dt
 $$
 
-## Ecuación del nodo intermedio
-
 $$
 \frac{1}{C} \int \left[i_1(t) - i_2(t)\right] dt = R_p\, i_2(t)
 $$
-
-## Ecuación de salida
 
 $$
 V_s(t) = R_p\, i_2(t)
@@ -109,134 +90,19 @@ $$
 
 ---
 
-# Transformada de Laplace
-
-Asumiendo condiciones iniciales nulas:
+# Modelo de Ecuaciones Íntegro-Diferenciales
 
 $$
-V_e(s) = R I_1(s) + L s I_1(s) + \frac{I_1(s) - I_2(s)}{C s}
+R i_1(t) =V_e(t) - L \frac{di_1(t)}{dt} - R_p i_2(t)
 $$
 
 $$
-\frac{I_1(s) - I_2(s)}{C s} = R_p I_2(s)
+i_1(t) =\frac{1}{R}\left[V_e(t) - L \frac{di_1(t)}{dt} - R_p i_2(t)\right]
 $$
 
 $$
-V_s(s) = R_p I_2(s)
+i_2(t) =\frac{1}{R_p}\left[\frac{1}{C}\int \left(i_1(t) - i_2(t)\right) dt\right]
 $$
-
----
-
-# Despeje de corrientes
-
-A partir de la ecuación del nodo:
-
-$$
-I_1(s) - I_2(s) = C s R_p I_2(s)
-$$
-
-$$
-I_1(s) = I_2(s)\left(1 + R_p C s\right)
-$$
-
----
-
-# Sustitución en la ecuación de entrada
-
-$$
-V_e(s) = I_1(R + L s) + \frac{I_1 - I_2}{C s}
-$$
-
-Dado que:
-
-$$
-\frac{I_1 - I_2}{C s} = R_p I_2 = V_s(s)
-$$
-
-Se obtiene:
-
-$$
-V_e(s) = I_1(R + L s) + V_s(s)
-$$
-
-Con:
-
-$$
-I_1 = I_2(1 + R_p C s)
-$$
-
-$$
-I_2 = \frac{V_s(s)}{R_p}
-$$
-
-Entonces:
-
-$$
-V_e(s) = \frac{V_s(s)}{R_p}(1 + R_p C s)(R + L s) + V_s(s)
-$$
-
----
-
-# Desarrollo algebraico
-
-$$
-(1 + R_p C s)(L s + R) =
-L s + R + R_p C L s^2 + R R_p C s
-$$
-
-Agrupando términos:
-
-$$
-V_e(s) =
-V_s(s)\left[
-\frac{R_p C L s^2 + (L + R R_p C)s + (R + R_p)}{R_p}
-\right]
-$$
-
----
-
-# Función de transferencia del sistema
-
-$$
-\boxed{
-\frac{V_s(s)}{V_e(s)} =
-\frac{R_p}{
-L C R_p s^2 + (L + R R_p C)s + (R + R_p)
-}
-}
-$$
-
----
-
-# Modelo íntegro-diferencial
-
-## Corriente \( i_1(t) \)
-
-$$
-R i_1(t) =
-V_e(t) - L \frac{di_1(t)}{dt} - R_p i_2(t)
-$$
-
-$$
-i_1(t) =
-\frac{1}{R}
-\left[
-V_e(t) - L \frac{di_1(t)}{dt} - R_p i_2(t)
-\right]
-$$
-
-## Corriente \( i_2(t) \)
-
-$$
-i_2(t) =
-\frac{1}{R_p}
-\left[
-\frac{1}{C}
-\int \left(i_1(t) - i_2(t)\right) dt
-\right]
-$$
-
-## Ecuación de salida
 
 $$
 V_s(t) = R_p i_2(t)
@@ -244,57 +110,15 @@ $$
 
 ---
 
-# Error en estado estacionario
+# Función de Transferencia
 
 $$
-e(s) =
-\lim_{s \to 0}
-\frac{1}{s}
-\left[
-1 - \frac{V_s(s)}{V_e(s)}
-\right]
-$$
-
-Evaluando la función de transferencia en régimen permanente:
-
-$$
-\left.
-\frac{V_s(s)}{V_e(s)}
-\right|_{s=0}
-=
-\frac{R_p}{R + R_p}
+\boxed{\frac{V_s(s)}{V_e(s)} =\frac{R_p}{L C R_p s^2 + (L + R R_p C)s + (R + R_p)}}
 $$
 
 ---
 
-# Ecuación característica
 
-$$
-L C R_p s^2 + (L + R R_p C)s + (R + R_p) = 0
-$$
-
-Coeficientes:
-
-$$
-a = L C R_p
-$$
-
-$$
-b = L + R R_p C
-$$
-
-$$
-c = R + R_p
-$$
-
----
-
-# Polos del sistema
-
-$$
-\lambda_{1,2} =
-\frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
-$$
 
 ## Lista de archivos incluidos en el repositorio
 
