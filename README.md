@@ -148,8 +148,7 @@ e(s)=
 $$
 
 $$
-\left.
-\frac{V_s(s)}{V_e(s)}\right|_{s=0}=\frac{R_p}{R + R_p}=0.333
+e(s)=\frac{R_p}{R+R_p}
 $$
 
 ---
