@@ -92,8 +92,7 @@ $$
 ## Ecuación de la malla de entrada
 
 $$
-V_e(t) = R\, i_1(t) + L \frac{di_1(t)}{dt}
-+ \frac{1}{C} \int \left[i_1(t) - i_2(t)\right] dt
+V_e(t) = R\, i_1(t) + L \frac{di_1(t)}{dt}+ \frac{1}{C} \int \left[i_1(t) - i_2(t)\right] dt
 $$
 
 ## Ecuación del nodo intermedio
