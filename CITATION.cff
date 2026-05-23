@@ -2,32 +2,37 @@
 # Visit https://bit.ly/cffinit to generate yours today!
 
 cff-version: 1.2.0
-title: ' Proyecto final: “Representación del Asma mediante un Circuito Eléctrico RLC” '
-message: 'Modelado de sistemas fisiologicos / Ingenieria Biomedica '
+title: "Proyecto final: Representacion del Asma mediante un Circuito Electrico RLC"
+message: "Modelado de sistemas fisiologicos / Ingenieria Biomedica"
 type: software
+
 authors:
   - given-names: Pamela
-    family-names: escobedo sandoval
+    family-names: Escobedo Sandoval
     email: l20211965@tectijuana.edu.mx
-    affiliation: Instituto tecnologico de tijuana
+    affiliation: Instituto Tecnologico de Tijuana
 
-- given-names: Alan Omar 
-    family-names: Garcia toledo
+  - given-names: Alan Omar
+    family-names: Garcia Toledo
     email: alan.garciate201@tectijuana.edu.mx
-    affiliation: Instituto tecnologico de tijuana
+    affiliation: Instituto Tecnologico de Tijuana
 
 identifiers:
   - type: url
-    value: 'https://github.com/l20211965-creator/MSFProyectoFinal'
-    description: Repositorio Git Hub
-repository-code: 'https://github.com/l20211965-creator/MSFProyectoFinal'
-url: 'https://github.com/l20211965-creator/MSFProyectoFinal'
+    value: "https://github.com/l20211965-creator/MSFProyectoFinal"
+    description: "Repositorio GitHub"
+
+repository-code: "https://github.com/l20211965-creator/MSFProyectoFinal"
+
+url: "https://github.com/l20211965-creator/MSFProyectoFinal"
+
 keywords:
   - Pulmones
   - Respiracion
-  - Presión pulmonar
+  - Presion pulmonar
   - Intercambio gaseoso
-  - Oxigenación
+  - Oxigenacion
+
 license: BSD-2-Clause
-version: '1.0'
-date-released: '2026-05-19'
+version: "1.0"
+date-released: "2026-05-19"
