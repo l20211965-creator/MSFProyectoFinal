@@ -10,6 +10,12 @@ authors:
     family-names: escobedo sandoval
     email: l20211965@tectijuana.edu.mx
     affiliation: Instituto tecnologico de tijuana
+
+- given-names: Alan Omar 
+    family-names: Garcia toledo
+    email: 
+    affiliation: Instituto tecnologico de tijuana
+
 identifiers:
   - type: url
     value: 'https://github.com/l20211965-creator/MSFProyectoFinal'
