@@ -133,27 +133,72 @@ $$
 
 ---
 
-# Error en Estado Estacionario para el Sistema del Caso
+# Error y Estabilidad
+
+## Error estacionario
+
+$$
+e(s)=
+\lim_{s \to 0}
+\frac{1}{
+\left[
+\frac{R_p}{LCR_p s^2 + (L + RR_pC)s + (R + R_p)}
+\right]
+}
+$$
 
 $$
 \left.
-\frac{V_s(s)}{V_e(s)}
-\right|_{s=0}
-=\frac{R_p}{R + R_p}
-$$
-
-$$
-e_{ss} =
-1 -
-\frac{R_p}{R + R_p}
-$$
-
-$$
-e_{ss} =
-\frac{R}{R + R_p}
+\frac{V_s(s)}{V_e(s)}\right|_{s=0}=\frac{R_p}{R + R_p}=0.333
 $$
 
 ---
+
+# Estabilidad para control
+
+$$
+(LCR_p)s^2 + (L + RR_pC)s + (R + R_p)=0
+$$
+
+$$
+a = LCR_p
+\qquad
+b = L + RR_pC
+\qquad
+c = R + R_p
+$$
+
+$$
+\lambda_{1,2} =
+\frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+$$
+
+$$
+\lambda_1 = -8.25
+\qquad
+\lambda_2 = -8.25
+$$
+
+Sistema estable con raíces reales negativas repetidas.
+
+---
+
+# Estabilidad para caso
+
+$$
+\left.
+\frac{V_s(s)}{V_e(s)}\right|_{s=0}=\frac{R_p}{R + R_p}=0.6
+$$
+
+$$
+\lambda_{1,2} =\frac{-(3.55) \pm \sqrt{(3.55)^2 - 4(0.252)(20)}}{2(0.252)}
+$$
+
+$$
+\lambda_1 = -7.0437
+\qquad
+\lambda_2 = -7.0437
+$$
 
 
 
