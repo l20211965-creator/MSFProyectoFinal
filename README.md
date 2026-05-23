@@ -92,9 +92,6 @@ $$
 
 # Modelo de Ecuaciones Íntegro-Diferenciales
 
-$$
-R i_1(t) =V_e(t) - L \frac{di_1(t)}{dt} - R_p i_2(t)
-$$
 
 $$
 i_1(t) =\frac{1}{R}\left[V_e(t) - L \frac{di_1(t)}{dt} - R_p i_2(t)\right]
@@ -117,6 +114,47 @@ $$
 $$
 
 ---
+
+
+# Error en Estado Estacionario para el Sistema de Control
+
+$$
+e_{ss} =
+\lim_{s \to 0}
+\frac{1}{1 + G(s)}
+$$
+
+$$
+G(s)=
+\frac{R_p}{
+L C R_p s^2 + (L + R R_p C)s + (R + R_p)
+}
+$$
+
+---
+
+# Error en Estado Estacionario para el Sistema del Caso
+
+$$
+\left.
+\frac{V_s(s)}{V_e(s)}
+\right|_{s=0}
+=\frac{R_p}{R + R_p}
+$$
+
+$$
+e_{ss} =
+1 -
+\frac{R_p}{R + R_p}
+$$
+
+$$
+e_{ss} =
+\frac{R}{R + R_p}
+$$
+
+---
+
 
 
 
