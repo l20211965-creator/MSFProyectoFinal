@@ -200,7 +200,9 @@ $$
 \lambda_2 = -7.0437
 $$
 
+se concluye que la respuesta del sistema tiende al equilibrio conforme transcurre el tiempo, evitando oscilaciones crecientes o inestabilidad.
 
+El sistema presenta raíces reales negativas repetidas, lo cual indica un comportamiento sobreamortiguado y estable, representando adecuadamente la dinámica respiratoria del modelo propuesto.
 
 
 ## Lista de archivos incluidos en el repositorio
