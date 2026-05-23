@@ -135,7 +135,7 @@ $$
 
 # Error y Estabilidad
 
-## Error estacionario
+## Error en estado estacionario
 
 $$
 e(s)=
@@ -148,7 +148,7 @@ e(s)=
 $$
 
 $$
-e(s)=\frac{R_p}{R+R_p}
+e(s)=\frac{R_p}{R+R_p} ={0.666}
 $$
 
 ---
