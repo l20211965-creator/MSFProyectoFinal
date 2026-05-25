@@ -245,14 +245,24 @@ Por lo tanto, el sistema patológico sigue siendo **estable** ya que la parte re
 
 ## Lista de archivos incluidos en el repositorio
 
-1\. Cuaderno computacional de MATLAB \[.mlx].
-2. Modelo de Simulink \[.slx].
-3. Archivos de Spyder \[.py].
-4. Imagen con los parámetros del controlador.
-5. Imágenes de las simulaciones \[.pdf].
-6. Evidencia del análisis matemático: función de transferencia, modelo de ecuaciones integro-diferenciales, error en estado estacionario y estabilidad en lazo abierto.
 
-7\. Modelo fisiológico en Biorender o BioArt.
+
+1.Cuaderno computacional de MATLAB [.mlx].
+
+2.Modelo de Simulink [.slx].
+
+3.Archivos de Spyder [.py].
+
+4.Imagen con los parámetros del controlador.
+
+5.Imágenes de las simulaciones [.pdf].
+
+6.Evidencia del análisis matemático: función de transferencia, modelo de ecuaciones integro-diferenciales, error en estado estacionario y estabilidad en lazo abierto.
+
+7.Modelo fisiológico en Biorender o BioArt.
+
+8.Ensayo gráfico.
+
 
 ## Referencias
 
