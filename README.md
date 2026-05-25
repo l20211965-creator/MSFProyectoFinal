@@ -123,6 +123,33 @@ Sustituyendo estas relaciones en el modelo del circuito y aplicando la transform
 
 $$G(s) = \frac{V_S(s)}{V_e(s)} = \frac{R_p}{L \cdot C \cdot R_p \cdot s^2 + (L + R \cdot R_p \cdot C) \cdot s + (R + R_p)}$$
 
+## Error en estado estacionario
+
+El error en estado estacionario se define como la diferencia entre la entrada y la salida de un sistema cuando el límite en el tiempo tiende a infinito. Este análisis solo es útil para sistemas estables, por lo que primero se debe determinar la estabilidad del sistema. Para sistemas en lazo abierto ante una entrada escalón unitario $V_e(s) = \frac{1}{s}$, el error en estado estacionario está dado por:
+
+$$e(s) = \lim_{s \to 0} s \cdot V_e(s) \left[ 1 - G(s) \right]$$
+
+### Error en estado estacionario para el sistema de control
+
+#### Valores del sistema de control (Caso Control - Pulmón Sano)
+
+| Condición | R | $R_p$ | L | C |
+| :--- | :---: | :---: | :---: | :---: |
+| **Control: Pulmón sano** | $2\ \Omega$ | $1\ \Omega$ | $0.5\ \text{H}$ | $0.08\ \text{F}$ |
+
+Sustituyendo los valores en la función de transferencia:
+
+$$G(s) = \frac{1}{(0.5)(0.08)(1)s^2 + \left(0.5 + (2)(1)(0.08)\right)s + (2 + 1)}$$
+
+$$G(s) = \frac{1}{0.04s^2 + 0.66s + 3}$$
+
+Desarrollando analíticamente el límite para el error:
+
+$$e(s) = \lim_{s \to 0} s \left(\frac{1}{s}\right) \left[ 1 - \frac{R_p}{LCR_p s^2 + (L + RR_pC)s + (R + R_p)} \right]$$
+
+$$e(s) = 1 - \frac{R_p}{R + R_p} = \frac{R}{R + R_p} = \frac{2}{2 + 1} = \frac{2}{3} \approx 0.667$$
+
+Por lo tanto, el error en estado estacionario para el sistema de control es de **0.667**, lo que significa que la salida se estabiliza en un valor que es $\frac{1}{3}$ menor que la entrada.
 
 
 ## Lista de archivos incluidos en el repositorio
