@@ -41,8 +41,39 @@ La asignatura de Modelado de Sistemas Fisiológicos forma parte del plan de estu
 6. Estudiar el comportamiento de los flujos respiratorios de entrada Ie(t) y salida Is(t) dentro del sistema dinámico.
 7. Obtener las ecuaciones diferenciales que describen el comportamiento dinámico del sistema respiratorio equivalente.
 
+# Sistema Respiratorio: Modelo RLC
 
+Este proyecto modela el sistema respiratorio mediante una analogía con un circuito RLC, enfocándose en la dinámica del flujo de aire y la mecánica pulmonar ante una patología obstructiva. El sistema respiratorio está formado por las vías aéreas superiores e inferiores, los alvéolos, la vasculatura pulmonar y los músculos respiratorios que generan los gradientes de presión necesarios para la ventilación.
 
+El pulmón participa en el intercambio gaseoso y regula el paso del aire a través de la resistencia de los conductos y la elasticidad del tejido pulmonar. En condiciones normales (caso control), el sistema opera con una resistencia mínima y una alta adaptabilidad. Sin embargo, en una condición patológica como el asma, las vías respiratorias sufren bronconstricción, inflamación crónica y atrapamiento de aire, alterando drásticamente la resistencia central y periférica, la inercia del flujo y la compliancia elástica del órgano.
+
+### Tabla 1. Parámetros del modelo RLC respiratorio y su Interpretación Fisiológica
+
+| Parámetro | Caso Control (Pulmón Sano) | Caso Asma (Enfermedad) | Interpretación Fisiológica y Justificación del Cambio |
+| :--- | :---: | :---: | :--- |
+| **R** (Resistencia central) | 2 $\Omega$ | 8 $\Omega$ | **Aumenta significativamente** debido a la bronconstricción aguda en las vías aéreas principales de conducción. La contracción del músculo liso bronquial reduce el diámetro del conducto, oponiéndose severamente al flujo de aire inicial. |
+| <span style="color:#d9381e">**Rp** (Resistencia periférica)</span> | <span style="color:#d9381e">1 $\Omega$</span> | <span style="color:#d9381e">12 $\Omega$</span> | **Aumenta de forma crítica** porque el proceso inflamatorio crónico, el edema de la mucosa y la hipersecreción de moco espeso obstruyen casi por completo la luz de los bronquiolos terminales y periféricos. |
+| **L** (Inercia del aire) | 0.5 H | 0.7 H | **Aumenta ligeramente** debido a que la reducción del calibre de las vías aéreas vuelve el flujo altamente turbulento. Al aumentar la resistencia, la masa de aire requiere una mayor diferencia de presión para acelerarse y mantener el flujo en movimiento. |
+| **C** (Compliance / Compliancia) | 0.08 F | 0.03 F | **Disminuye drásticamente** debido al atrapamiento de aire (hiperinsuflación). Los alvéolos pierden su capacidad de distenderse de manera eficiente, volviendo al tejido pulmonar mecánicamente más rígido y difícil de expandir durante la inspiración. |
+| **Ve** (Voltaje de entrada) | 5 V | 5 V | **Se mantiene constante** como variable de control para simular que el esfuerzo muscular del paciente o el gradiente de presión externa aplicado por la caja torácica es idéntico en ambos escenarios, permitiendo evaluar el impacto real de la patología. |
+
+> **Nota de Simulación:** La presión de entrada ($V_e$) se fija igual en ambos casos para aislar y comparar de forma justa cómo la obstrucción y rigidez del asma alteran el volumen, el flujo y el comportamiento dinámico del sistema pulmonar.
+
+## Justificación del sistema
+
+### Valores de los Parámetros del Sistema Respiratorio
+
+### Valores de los Parámetros del Sistema Pulmonar y su Interpretación Fisiológica
+
+| Parámetro | Caso Control (Pulmón Sano) | Caso Asma (Enfermedad) | Interpretación fisiológica |
+| :--- | :---: | :---: | :--- |
+| **R** (Resistencia central) | 2 $\Omega$ | 8 $\Omega$ | **Aumenta significativamente** debido a la bronconstricción (estrechamiento) de las vías aéreas principales provocado por la contracción del músculo liso. |
+| <span style="color:#d9381e">**Rp** (Resistencia periférica)</span> | <span style="color:#d9381e">1 $\Omega$</span> | <span style="color:#d9381e">12 $\Omega$</span> | **Aumenta de forma crítica** porque la inflamación de la mucosa, el edema y la acumulación de secreciones (moco) obstruyen severamente los bronquiolos más pequeños. |
+| **L** (Inercia del aire) | 0.5 H | 0.7 H | **Aumenta ligeramente** debido a que el flujo de aire se vuelve más turbulento y denso al intentar pasar por conductos estrechos, requiriendo mayor fuerza para acelerar el gas. |
+| **C** (Compliance / Compliancia) | 0.08 F | 0.03 F | **Disminuye drásticamente** porque el pulmón se vuelve más rígido (pierde elasticidad y distensibilidad) a causa del atrapamiento de aire y la sobredistensión alveolar. |
+| **Ve** (Voltaje de entrada) | 5 V | 5 V | **Se mantiene constante** como variable de control para simular que el esfuerzo respiratorio inicial o gradiente de presión externa aplicado es el mismo en ambos escenarios. |
+
+> **Nota:** La presión de entrada ($V_e$) es la misma en ambos casos para poder comparar de forma justa el efecto directo de la enfermedad sobre los parámetros físicos del sistema.
 ## Descripción detallada del sistema respiratorio
 
 El sistema respiratorio permite el intercambio de gases mediante el movimiento de aire a
@@ -69,22 +100,6 @@ respiratorias como el asma o la EPOC.
 6. Se identifican los siguientes dos flujos en el sistema: el flujo de entrada de aire Ie(t), que
 circula desde la fuente de entrada hacia el sistema respiratorio, y el flujo de salida o
 distribución Is(t), asociado a la respuesta respiratoria efectiva en los pulmones.
-
-## Justificación del sistema
-
-### Valores de los Parámetros del Sistema Respiratorio
-
-### Valores de los Parámetros del Sistema Pulmonar y su Interpretación Fisiológica
-
-| Parámetro | Caso Control (Pulmón Sano) | Caso Asma (Enfermedad) | Interpretación fisiológica |
-| :--- | :---: | :---: | :--- |
-| **R** (Resistencia central) | 2 $\Omega$ | 8 $\Omega$ | **Aumenta significativamente** debido a la bronconstricción (estrechamiento) de las vías aéreas principales provocado por la contracción del músculo liso. |
-| <span style="color:#d9381e">**Rp** (Resistencia periférica)</span> | <span style="color:#d9381e">1 $\Omega$</span> | <span style="color:#d9381e">12 $\Omega$</span> | **Aumenta de forma crítica** porque la inflamación de la mucosa, el edema y la acumulación de secreciones (moco) obstruyen severamente los bronquiolos más pequeños. |
-| **L** (Inercia del aire) | 0.5 H | 0.7 H | **Aumenta ligeramente** debido a que el flujo de aire se vuelve más turbulento y denso al intentar pasar por conductos estrechos, requiriendo mayor fuerza para acelerar el gas. |
-| **C** (Compliance / Compliancia) | 0.08 F | 0.03 F | **Disminuye drásticamente** porque el pulmón se vuelve más rígido (pierde elasticidad y distensibilidad) a causa del atrapamiento de aire y la sobredistensión alveolar. |
-| **Ve** (Voltaje de entrada) | 5 V | 5 V | **Se mantiene constante** como variable de control para simular que el esfuerzo respiratorio inicial o gradiente de presión externa aplicado es el mismo en ambos escenarios. |
-
-> **Nota:** La presión de entrada ($V_e$) es la misma en ambos casos para poder comparar de forma justa el efecto directo de la enfermedad sobre los parámetros físicos del sistema.
 
 
 <img width="863" height="601" alt="Captura de pantalla 2026-05-22 162619" src="https://github.com/user-attachments/assets/134be0c0-5ab8-4f48-80eb-9fe4040b737d" /><br>
