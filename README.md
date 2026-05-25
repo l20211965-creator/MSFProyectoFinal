@@ -87,8 +87,7 @@ respiratorias como el asma o la EPOC.
 circula desde la fuente de entrada hacia el sistema respiratorio, y el flujo de salida o
 distribución Is(t), asociado a la respuesta respiratoria efectiva en los pulmones.
 
-<img width="1024" height="713" alt="image" src="https://github.com/user-attachments/assets/94deba04-d42c-4a42-8dfa-a2608c92e5c9" />
-
+<img width="1024" height="713" alt="image" src="https://github.com/user-attachments/assets/def9c633-42f5-4633-bea5-7d1e957435aa" />
 
 
 ## Modelo matemático del sistema
