@@ -151,6 +151,98 @@ $$e(s) = 1 - \frac{R_p}{R + R_p} = \frac{R}{R + R_p} = \frac{2}{2 + 1} = \frac{2
 
 Por lo tanto, el error en estado estacionario para el sistema de control es de **0.667**, lo que significa que la salida se estabiliza en un valor que es $\frac{1}{3}$ menor que la entrada.
 
+### Error en estado estacionario para el sistema patológico
+
+#### Valores del sistema patológico (Caso Asma - Enfermedad)
+
+| Condición | R | $R_p$ | L | C |
+| :--- | :---: | :---: | :---: | :---: |
+| **Caso: Asma (Enfermedad)** | $8\ \Omega$ | $12\ \Omega$ | $0.7\ \text{H}$ | $0.03\ \text{F}$ |
+
+Sustituyendo los valores en la función de transferencia:
+
+$$G(s) = \frac{12}{(0.7)(0.03)(12)s^2 + \left(0.7 + (8)(12)(0.03)\right)s + (8 + 12)}$$
+
+$$G(s) = \frac{12}{0.252s^2 + 3.58s + 20}$$
+
+Desarrollando analíticamente el límite para el error en el caso patológico:
+
+$$e(s) = \lim_{s \to 0} s \left(\frac{1}{s}\right) \left[ 1 - \frac{R_p}{LCR_p s^2 + (L + RR_pC)s + (R + R_p)} \right]$$
+
+$$e(s) = 1 - \frac{R_p}{R + R_p} = \frac{R}{R + R_p} = \frac{8}{8 + 12} = \frac{8}{20} = \frac{2}{5} = 0.4$$
+
+Por lo tanto, el error en estado estacionario para el sistema patológico es de **0.400**, lo que significa que la salida se ve afectada por la obstrucción pulmonar y se estabiliza en un valor menor que la entrada en menor proporción comparado con el caso control debido al drástico incremento de la resistencia periférica ($R_p$).
+
+## Estabilidad del sistema en lazo abierto
+
+Para analizar la estabilidad en lazo abierto se utiliza el denominador de la función de transferencia del sistema respiratorio:
+
+$$G(s) = \frac{R_p}{LCR_p s^2 + (L + RR_pC)s + (R + R_p)}$$
+
+Para determinar la estabilidad se calculan las raíces del denominador usando la fórmula general:
+
+$$\lambda_{1,2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
+
+Dónde los coeficientes dependen de los parámetros físicos del circuito:
+
+$$a = LCR_p$$
+
+$$b = L + RR_pC$$
+
+$$c = R + R_p$$
+
+---
+
+### Estabilidad para el Control (Pulmón Sano)
+
+Utilizando los valores del control ($R = 2\ \Omega$, $R_p = 1\ \Omega$, $L = 0.5\ \text{H}$, $C = 0.08\ \text{F}$), los coeficientes son:
+
+$$a = (0.5)(0.08)(1) = 0.04$$
+
+$$b = 0.5 + (2)(1)(0.08) = 0.66$$
+
+$$c = 2 + 1 = 3$$
+
+Sustituyendo en la ecuación cuadrática:
+
+$$\lambda_{1,2} = \frac{-0.66 \pm \sqrt{(0.66)^2 - 4(0.04)(3)}}{2(0.04)}$$
+
+$$\lambda_{1,2} = \frac{-0.66 \pm \sqrt{0.4356 - 0.48}}{0.08} = \frac{-0.66 \pm \sqrt{-0.0444}}{0.08}$$
+
+Calculando las raíces complejas conjugadas:
+
+$$\lambda_1 = -8.25 + 2.63j$$
+
+$$\lambda_2 = -8.25 - 2.63j$$
+
+Por lo tanto, el sistema es **estable** dado que la parte real de ambas raíces es negativa ($\text{Re}(\lambda) = -8.25$). Al tener componentes imaginarias, el sistema presenta un comportamiento **subamortiguado**.
+
+### Estabilidad para el caso Patológico (Asma)
+
+Utilizando los valores del caso patológico debido a la enfermedad ($R = 8\ \Omega$, $R_p = 12\ \Omega$, $L = 0.7\ \text{H}$, $C = 0.03\ \text{F}$), evaluamos los nuevos coeficientes del denominador:
+
+$$a = LCR_p = (0.7)(0.03)(12) = 0.252$$
+
+$$b = L + RR_pC = 0.7 + (8)(12)(0.03) = 0.7 + 2.88 = 3.58$$
+
+$$c = R + R_p = 8 + 12 = 20$$
+
+Sustituyendo estos coeficientes en la ecuación cuadrática general para obtener los polos del sistema ($\lambda_{1,2}$):
+
+$$\lambda_{1,2} = \frac{-3.58 \pm \sqrt{(3.58)^2 - 4(0.252)(20)}}{2(0.252)}$$
+
+$$\lambda_{1,2} = \frac{-3.58 \pm \sqrt{12.8164 - 20.16}}{0.504}$$
+
+$$\lambda_{1,2} = \frac{-3.58 \pm \sqrt{-7.3436}}{0.504}$$
+
+Calculando las raíces complejas conjugadas resultantes:
+
+$$\lambda_1 = -7.10 + 5.38j$$
+
+$$\lambda_2 = -7.10 - 5.38j$$
+
+Por lo tanto, el sistema patológico sigue siendo **estable** ya que la parte real de ambas raíces se mantiene en el semiplano izquierdo de Laplace ($\text{Re}(\lambda) = -7.10$). Debido a la presencia de la componente imaginaria provocada por los severos cambios de resistencia y compliancia del asma, el sistema mantiene un comportamiento **subamortiguado**, pero con una frecuencia de oscilación mayor y una respuesta transitoria modificada en comparación con el caso control.
+
 
 ## Lista de archivos incluidos en el repositorio
 
