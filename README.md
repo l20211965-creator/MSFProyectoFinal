@@ -70,7 +70,19 @@ respiratorias como el asma o la EPOC.
 circula desde la fuente de entrada hacia el sistema respiratorio, y el flujo de salida o
 distribución Is(t), asociado a la respuesta respiratoria efectiva en los pulmones.
 
+## Justificación del sistema
 
+### Valores de los Parámetros del Sistema Respiratorio
+
+| Parámetro | Caso Control (Pulmón Sano) | Caso Asma (Enfermedad) |
+| :--- | :---: | :---: |
+| **R** (Resistencia central) | 2 $\Omega$ | 8 $\Omega$ |
+| <span style="color:#d9381e">**Rp** (Resistencia periférica)</span> | <span style="color:#d9381e">1 $\Omega$</span> | <span style="color:#d9381e">12 $\Omega$</span> |
+| **L** (Inercia del aire) | 0.5 H | 0.7 H |
+| **C** (Compliance) | 0.08 F | 0.03 F |
+| **Ve** (Voltaje de entrada) | 5 V | 5 V |
+
+> **Nota:** La presión de entrada ($V_e$) es la misma en ambos casos para comparar el efecto de los parámetros.
 
 
 <img width="863" height="601" alt="Captura de pantalla 2026-05-22 162619" src="https://github.com/user-attachments/assets/134be0c0-5ab8-4f48-80eb-9fe4040b737d" /><br>
