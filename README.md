@@ -43,7 +43,7 @@ La asignatura de Modelado de Sistemas Fisiológicos forma parte del plan de estu
 
 
 
-## Descripción detallada del sistema
+## Descripción detallada del sistema respiratorio
 
 El sistema respiratorio permite el intercambio de gases mediante el movimiento de aire a
 través de las vías respiratorias y los pulmones. Esta dinámica puede representarse de
