@@ -91,62 +91,38 @@ distribución Is(t), asociado a la respuesta respiratoria efectiva en los pulmon
 
 
 
-# Modelo Matemático del Sistema
+## Modelo matemático del sistema
 
-$$
-V_e(t) = R\, i_1(t) + L \frac{di_1(t)}{dt}+ \frac{1}{C} \int \left[i_1(t) - i_2(t)\right] dt
-$$
+Se calculó de forma analítica la función de transferencia, el error en estado estacionario y el modelo de ecuaciones íntegro-diferenciales. Además, se consideran la estabilidad en lazo abierto para el caso control y el caso patológico (Asma).
 
-$$
-\frac{1}{C} \int \left[i_1(t) - i_2(t)\right] dt = R_p\, i_2(t)
-$$
+### Ecuaciones principales del sistema
 
-$$
-V_s(t) = R_p\, i_2(t)
-$$
+Las ecuaciones íntegro-diferenciales que describen el comportamiento del circuito RLC análogo al sistema respiratorio son:
 
----
+| Ecuación | Modelo |
+| :--- | :--- |
+| **Ec. 1** | $V_e(t) = R \, i_1(t) + L \frac{di_1(t)}{dt} + \frac{1}{C} \int (i_1(t) - i_2(t)) \, dt$ |
+| **Ec. 2** | $\frac{1}{C} \int (i_1(t) - i_2(t)) \, dt = R_p \, i_2(t)$ |
+| **Ec. 3** | $V_S(t) = R_p \, i_2(t)$ |
 
-# Modelo de Ecuaciones Íntegro-Diferenciales
+## Modelo de Ecuaciones íntegro-diferenciales
 
+A partir del análisis del circuito RLC, las corrientes de malla y la salida se pueden expresar de la siguiente manera:
 
-$$
-i_1(t) =\frac{1}{R}\left[V_e(t) - L \frac{di_1(t)}{dt} - R_p i_2(t)\right]
-$$
+$$i_1(t) = \frac{1}{R} \left[ V_e(t) - L \frac{di_1(t)}{dt} - R_p \, i_2(t) \right]$$
 
-$$
-i_2(t) =\frac{1}{R_p}\left[\frac{1}{C}\int \left(i_1(t) - i_2(t)\right) dt\right]
-$$
+$$i_2(t) = \frac{1}{R_p} \left[ \frac{1}{C} \int (i_1(t) - i_2(t)) \, dt \right]$$
 
-$$
-V_s(t) = R_p i_2(t)
-$$
+$$V_S(t) = R_p \, i_2(t)$$
 
----
+Donde $i_1(t)$ representa el flujo de aire o corriente de la malla izquierda asociada a las vías aéreas centrales y la inercia del gas, mientras que $i_2(t)$ representa la corriente de la malla derecha relacionada con la dinámica de la resistencia periférica y la distensibilidad pulmonar (compliancia) en los alvéolos.
 
-# Función de Transferencia
+### Función de transferencia
 
-$$
-\boxed{\frac{V_s(s)}{V_e(s)} =\frac{R_p}{L C R_p s^2 + (L + R R_p C)s + (R + R_p)}}
-$$
+Sustituyendo estas relaciones en el modelo del circuito y aplicando la transformada de Laplace con condiciones iniciales cero, se obtiene la función de transferencia del sistema respiratorio:
 
----
+$$G(s) = \frac{V_S(s)}{V_e(s)} = \frac{R_p}{L \cdot C \cdot R_p \cdot s^2 + (L + R \cdot R_p \cdot C) \cdot s + (R + R_p)}$$
 
-
-$$
-e(s)=\lim_{s \to 0} V_e(s)
-\left[1 -\frac{V_s(s)}{V_e(s)}\right]=\lim_{s \to 0}
-\frac{1}{\left[
-\frac{R_p}{
-LCR_p s^2 + (L + RR_pC)s + (R + R_p)
-}
-\right]
-}
-$$
-
-se concluye que la respuesta del sistema tiende al equilibrio conforme transcurre el tiempo, evitando oscilaciones crecientes o inestabilidad.
-
-El sistema presenta raíces reales negativas repetidas, lo cual indica un comportamiento sobreamortiguado y estable, representando adecuadamente la dinámica respiratoria del modelo propuesto.
 
 
 ## Lista de archivos incluidos en el repositorio
