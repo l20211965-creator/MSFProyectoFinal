@@ -1,7 +1,7 @@
 [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=l20211965-creator/MSFPractica2)
 
 
-# Proyecto Final : “Representación del Asma mediante un Circuito Eléctrico RLC” O
+# Proyecto Final : “Representación del Asma mediante un Circuito Eléctrico RLC” 
 
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/6682b132-ff02-4c44-ac13-fd3540e2df28" />
 
