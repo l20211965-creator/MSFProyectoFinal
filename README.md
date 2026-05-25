@@ -74,15 +74,17 @@ distribución Is(t), asociado a la respuesta respiratoria efectiva en los pulmon
 
 ### Valores de los Parámetros del Sistema Respiratorio
 
-| Parámetro | Caso Control (Pulmón Sano) | Caso Asma (Enfermedad) |
-| :--- | :---: | :---: |
-| **R** (Resistencia central) | 2 $\Omega$ | 8 $\Omega$ |
-| <span style="color:#d9381e">**Rp** (Resistencia periférica)</span> | <span style="color:#d9381e">1 $\Omega$</span> | <span style="color:#d9381e">12 $\Omega$</span> |
-| **L** (Inercia del aire) | 0.5 H | 0.7 H |
-| **C** (Compliance) | 0.08 F | 0.03 F |
-| **Ve** (Voltaje de entrada) | 5 V | 5 V |
+### Valores de los Parámetros del Sistema Pulmonar y su Interpretación Fisiológica
 
-> **Nota:** La presión de entrada ($V_e$) es la misma en ambos casos para comparar el efecto de los parámetros.
+| Parámetro | Caso Control (Pulmón Sano) | Caso Asma (Enfermedad) | Interpretación fisiológica |
+| :--- | :---: | :---: | :--- |
+| **R** (Resistencia central) | 2 $\Omega$ | 8 $\Omega$ | **Aumenta significativamente** debido a la bronconstricción (estrechamiento) de las vías aéreas principales provocado por la contracción del músculo liso. |
+| <span style="color:#d9381e">**Rp** (Resistencia periférica)</span> | <span style="color:#d9381e">1 $\Omega$</span> | <span style="color:#d9381e">12 $\Omega$</span> | **Aumenta de forma crítica** porque la inflamación de la mucosa, el edema y la acumulación de secreciones (moco) obstruyen severamente los bronquiolos más pequeños. |
+| **L** (Inercia del aire) | 0.5 H | 0.7 H | **Aumenta ligeramente** debido a que el flujo de aire se vuelve más turbulento y denso al intentar pasar por conductos estrechos, requiriendo mayor fuerza para acelerar el gas. |
+| **C** (Compliance / Compliancia) | 0.08 F | 0.03 F | **Disminuye drásticamente** porque el pulmón se vuelve más rígido (pierde elasticidad y distensibilidad) a causa del atrapamiento de aire y la sobredistensión alveolar. |
+| **Ve** (Voltaje de entrada) | 5 V | 5 V | **Se mantiene constante** como variable de control para simular que el esfuerzo respiratorio inicial o gradiente de presión externa aplicado es el mismo en ambos escenarios. |
+
+> **Nota:** La presión de entrada ($V_e$) es la misma en ambos casos para poder comparar de forma justa el efecto directo de la enfermedad sobre los parámetros físicos del sistema.
 
 
 <img width="863" height="601" alt="Captura de pantalla 2026-05-22 162619" src="https://github.com/user-attachments/assets/134be0c0-5ab8-4f48-80eb-9fe4040b737d" /><br>
