@@ -53,7 +53,7 @@ El pulmón participa en el intercambio gaseoso y regula el paso del aire a trav�
 | :--- | :---: | :---: | :--- |
 | **R** (Resistencia central) | 2 $\Omega$ | 8 $\Omega$ | **Aumenta significativamente** debido a la bronconstricción aguda en las vías aéreas principales de conducción. La contracción del músculo liso bronquial reduce el diámetro del conducto, oponiéndose severamente al flujo de aire inicial. |
 | <span style="color:#d9381e">**Rp** (Resistencia periférica)</span> | <span style="color:#d9381e">1 $\Omega$</span> | <span style="color:#d9381e">12 $\Omega$</span> | **Aumenta de forma crítica** porque el proceso inflamatorio crónico, el edema de la mucosa y la hipersecreción de moco espeso obstruyen casi por completo la luz de los bronquiolos terminales y periféricos. |
-| **L** (Inercia del aire) | $0dot5$ H | $0dot7$ H | **Aumenta ligeramente** debido a que la reducción del calibre de las vías aéreas vuelve el flujo altamente turbulento. Al aumentar la resistencia, la masa de aire requiere una mayor diferencia de presión para acelerarse y mantener el flujo en movimiento. |
+| **L** (Inercia del aire) | $0.t5$ H | $0.t7$ H | **Aumenta ligeramente** debido a que la reducción del calibre de las vías aéreas vuelve el flujo altamente turbulento. Al aumentar la resistencia, la masa de aire requiere una mayor diferencia de presión para acelerarse y mantener el flujo en movimiento. |
 | **C** (Compliance / Compliancia) | $0.08$ F | $0.03$ F | **Disminuye drásticamente** debido al atrapamiento de aire (hiperinsuflación). Los alvéolos pierden su capacidad de distenderse de manera eficiente, volviendo al tejido pulmonar mecánicamente más rígido y difícil de expandir durante la inspiración. |
 | **Ve** (Voltaje de entrada) | 5 V | 5 V | **Se mantiene constante** como variable de control para simular que el esfuerzo muscular del paciente o el gradiente de presión externa aplicado por la caja torácica es idéntico en ambos escenarios, permitiendo evaluar el impacto real de la patología. |
 
@@ -94,19 +94,23 @@ distribución Is(t), asociado a la respuesta respiratoria efectiva en los pulmon
 
 Se calculó de forma analítica la función de transferencia, el error en estado estacionario y el modelo de ecuaciones íntegro-diferenciales. Además, se consideran la estabilidad en lazo abierto para el caso control y el caso patológico (Asma).
 
-### Ecuaciones principales del sistema
-
-Las ecuaciones íntegro-diferenciales que describen el comportamiento del circuito RLC análogo al sistema respiratorio son:
-
 
 
 ### Ecuación principal
 
-$$V_e(t) = R \, i_1(t) + L \frac{di_1(t)}{dt} + \frac{1}{c} \int (i_1(t) - i_2(t)) \, dt$$
+$$
+i_1(t)=\frac{V_e(t)-L\frac{di_1(t)}{dt}-\frac{1}{C}\int\left(i_1(t)-i_2(t)\right)\,dt}{R}
+$$
 
-$$\frac{1}{C} \int (i_1(t) - i_2(t)) \, dt = R_p \, i_2(t)$$
+$$
+i_2(t)=\frac{\frac{1}{C}\int\left(i_1(t)-i_2(t)\right)\,dt}{R_p}
+$$
 
-$$V_S = R_p \, i_2(t)$$
+$$
+V_S(t)=R_p\,i_2(t)
+$$
+
+
 ## Modelo de Ecuaciones íntegro-diferenciales
 
 A partir del análisis del circuito RLC, las corrientes de malla y la salida se pueden expresar de la siguiente manera:
