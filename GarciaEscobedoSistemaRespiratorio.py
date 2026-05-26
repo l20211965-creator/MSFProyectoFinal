@@ -76,7 +76,7 @@ def controlador(kP, kI, kD, sys):
     PID = ctrl.tf(numPID, denPID)
     return ctrl.feedback(ctrl.series(PID, sys), 1)
 
-# ESTAS SON LAS GANANCIAS NUEVAS Y AJUSTADAS 
+# ESTAS SON LAS GANANCIAS  
 casoPID = controlador(200.0, 50.0, 1.2, sys_caso)
 
 # casoPID = controlador(1432.29305325518, 373031.6074, 0.32274 sys_caso)
