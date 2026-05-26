@@ -177,6 +177,7 @@ $$
 $$
 V_s(t) = R_p\ i_2(t)
 $$
+
 ---
 
 # Error en Estado Estacionario
@@ -185,6 +186,17 @@ $$
 e_{ss}=\lim_{s\to0}sE(s)
 $$
 <div align="center">
+
+
+  
+| Caso Control | Caso (Asma) |
+|---|---|
+| $$e_{ss}=\frac{R_c}{R_c+R_p}$$ | $$e_{ss}=\frac{R_c}{R_c+R_p}$$ |
+| $$e_{ss}=\frac{1}{1.5}$$ | $$e_{ss}=\frac{8.5}{16}$$ |
+| $$e_{ss}=0.6667$$ | $$e_{ss}=0.33$$ |
+  
+</div>
+# Analisis de estabilidad
 
 # Coeficientes del Denominador
 
@@ -199,15 +211,6 @@ $$
 $$
 c=R+R_p
 $$
-  
-| Caso Control | Caso (Asma) |
-|---|---|
-| $$e_{ss}=\frac{R_c}{R_c+R_p}$$ | $$e_{ss}=\frac{R_c}{R_c+R_p}$$ |
-| $$e_{ss}=\frac{1}{1.5}$$ | $$e_{ss}=\frac{8.5}{16}$$ |
-| $$e_{ss}=0.6667$$ | $$e_{ss}=0.33$$ |
-  
-</div>
-# Analisis de estabilidad
 
 La ecuación característica del sistema es:
 
