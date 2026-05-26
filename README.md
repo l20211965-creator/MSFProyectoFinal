@@ -100,11 +100,11 @@ Las ecuaciones íntegro-diferenciales que describen el comportamiento del circui
 
 ### Ecuación principal
 
-$$V_e(t) = R \, i_1(t) + L \frac{di_1(t)}{dt} + \frac{1}{\mathrm{C}} \int (i_1(t) - i_2(t)) \, dt$$
+$$V_e(t) = R. \, i_1(t) + L \frac{di_1(t)}{dt} + \frac{1}{\mathrm{C}} \int (i_1(t) - i_2(t)) \, dt$$
 
-$$\frac{1}{\mathrm{CC}} \int (i_1(t) - i_2(t)) \, dt = R_p \, i_2(t)$$
+$$\frac{1}{\mathrm{C}} \int (i_1(t) - i_2(t)) \, dt = R_p \, i_2(t)$$
 
-$$V_S = R_p \, i_2(t)$$
+$$V_S = R_p.\, i_2(t)$$
 
 ## Modelo de Ecuaciones íntegro-diferenciales
 
