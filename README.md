@@ -115,15 +115,15 @@ $$
 # Transformada de Laplace
 
 $$
-V_e(s)=R\,I_1(s)+L\,s\,I_1(s)+\frac{I_1(s)-I_2(s)}{C\,s}
+V_e(s)=RI_1(s)+LsI_1(s)+\frac{I_1(s)-I_2(s)}{Cs}
 $$
 
 $$
-\frac{I_1(s)-I_2(s)}{C\,s}=R_p\,I_2(s)
+\frac{I_1(s)-I_2(s)}{Cs}=R_pI_2(s)
 $$
 
 $$
-V_s(s)=R_p\,I_2(s)
+V_s(s)=R_pI_2(s)
 $$
 ---
 
