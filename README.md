@@ -164,19 +164,19 @@ $$
 ---
 
 # Ecuaciones Integro-Diferenciales
+# Ecuaciones Integro-Diferenciales
 
 $$
-R\,i_1(t)=V_e(t)-L\frac{di_1(t)}{dt}-\frac{1}{C}\int \left[i_1(t)-i_2(t)\right]dt
-$$
-
-$$
-\frac{1}{C}\int \left[i_1(t)-i_2(t)\right]dt=R_p\,i_2(t)
+i_1(t)=\frac{1}{R}\left[V_e(t)-L\frac{di_1(t)}{dt}-R_p\,i_2(t)\right]
 $$
 
 $$
-R\,i_1(t)=V_e(t)-L\frac{di_1(t)}{dt}-R_p\,i_2(t)
+i_2(t)=\frac{1}{R_p}\left[\frac{1}{C}\int\left(i_1(t)-i_2(t)\right)dt\right]
 $$
 
+$$
+V_s(t)=R_p\,i_2(t)
+$$
 ---
 
 # Error en Estado Estacionario
@@ -185,6 +185,20 @@ $$
 e_{ss}=\lim_{s\to0}sE(s)
 $$
 <div align="center">
+
+# Coeficientes del Denominador
+
+$$
+a=LCR_p
+$$
+
+$$
+b=L+RR_pC
+$$
+
+$$
+c=R+R_p
+$$
   
 | Caso Control | Caso (Asma) |
 |---|---|
