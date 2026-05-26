@@ -231,7 +231,7 @@ $$
 
 | Parámetro | Caso Control | Caso Experimental |
 |---|---|---|
-| Raíces del sistema | $$\lambda_1 = -7.0437$$  $$\lambda_2 = -7.0437$$ | $$\lambda_1 = -8.25$$  $$\lambda_2 = -8.25$$ |
+| Raíces del sistema | $$\lambda_1 = -7.0437 + 5.4546j$$  $$\lambda_2 = -7.0437 - 5.4546j$$ | $$\lambda_1 = -8.25 + 2.63j$$  $$\lambda_2 = -8.25 - 2.63j$$ |
 | Tipo de raíces | Reales y negativas | Reales y negativas |
 | Estabilidad | Sistema estable | Sistema estable |
 | Comportamiento | Subamortiguado | Subamortiguado |
