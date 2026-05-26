@@ -163,7 +163,7 @@ $$
 
 ---
 
-# Ecuaciones Integro-Diferenciales
+
 # Ecuaciones Integro-Diferenciales
 
 $$
@@ -175,7 +175,7 @@ i_2(t)=\frac{1}{R_p}\left[\frac{1}{C}\int\left(i_1(t)-i_2(t)\right)dt\right]
 $$
 
 $$
-V_s(t)=R_p\,i_2(t)
+V_s(t) = R_p\ i_2(t)
 $$
 ---
 
