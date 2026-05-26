@@ -121,10 +121,10 @@ $$
 $$
 \frac{I_1(s)-I_2(s)}{Cs}=R_pI_2(s)
 $$
+$$
+V_s(t) = R_p\ i_2(t)
+$$
 
-$$
-V_s(s)=R_pI_2(s)
-$$
 ---
 
 # Desarrollo Algebraico
