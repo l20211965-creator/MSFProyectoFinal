@@ -222,6 +222,7 @@ $$
 | Error estacionario | $$e_{ss}=0.6$$ | $$e_{ss}=0.333$$ |
 </div>
 ---
+
 # Error en Estado Estacionario
 
 $$
