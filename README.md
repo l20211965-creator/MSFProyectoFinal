@@ -97,15 +97,15 @@ Se calculó de forma analítica la función de transferencia, el error en estado
 # Ecuaciones Principales del Sistema
 
 $$
-V_e(t) = R\, i_1(t) + L \frac{di_1(t)}{dt}+ \frac{1}{C} \int \left[i_1(t) - i_2(t)\right] dt
+V_e(t) = R\ i_1(t) + L \frac{di_1(t)}{dt}+ \frac{1}{C} \int \left[i_1(t) - i_2(t)\right] dt
 $$
 
 $$
-\frac{1}{C} \int \left[i_1(t) - i_2(t)\right] dt = R_p\, i_2(t)
+\frac{1}{C} \int \left[i_1(t) - i_2(t)\right] dt = R_p\ i_2(t)
 $$
 
 $$
-V_s(t) = R_p\, i_2(t)
+V_s(t) = R_p\ i_2(t)
 $$
 
 ---
@@ -113,15 +113,15 @@ $$
 # Transformada de Laplace
 
 $$
-V_e(s)=R\,I_1(s)+L\,s\,I_1(s)+\frac{I_1(s)-I_2(s)}{C\,s}
+V_e(s)=R\,I_1(s)+L\s\I_1(s)+\frac{I_1(s)-I_2(s)}{C\,s}
 $$
 
 $$
-\frac{I_1(s)-I_2(s)}{C\,s}=R_p\,I_2(s)
+\frac{I_1(s)-I_2(s)}{C\s}=R_p\I_2(s)
 $$
 
 $$
-V_s(s)=R_p\,I_2(s)
+V_s(s)=R_p\I_2(s)
 $$
 
 ---
