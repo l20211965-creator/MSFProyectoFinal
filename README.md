@@ -102,7 +102,7 @@ Las ecuaciones íntegro-diferenciales que describen el comportamiento del circui
 
 $$V_e(t) = R1 \, i_1(t) + L \frac{di_1(t)}{dt} + \frac{1}{\mathrm{C1}} \int (i_1(t) - i_2(t)) \, dt$$
 
-$$\frac{1}{\mathrm{C1}} \int (i_1(t) - i_2(t)) \, dt = R_p2 \, i_2(t)$$
+$$\frac{1}{\mathrm{C }} \int (i_1(t) - i_2(t)) \, dt = R_p2 \, i_2(t)$$
 
 $$V_S = R_p2\, i_2(t)$$
 
