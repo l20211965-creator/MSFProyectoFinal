@@ -94,152 +94,150 @@ distribución Is(t), asociado a la respuesta respiratoria efectiva en los pulmon
 
 Se calculó de forma analítica la función de transferencia, el error en estado estacionario y el modelo de ecuaciones íntegro-diferenciales. Además, se consideran la estabilidad en lazo abierto para el caso control y el caso patológico (Asma).
 
-### Ecuación principal
+# Ecuaciones Principales del Sistema
 
-$$\frac{V_S(s)}{V_e(s)} = \frac{s^2 + s}{as^2 + bs + c}$$
+$$
+V_e(t) = R\, i_1(t) + L \frac{di_1(t)}{dt}+ \frac{1}{C} \int \left[i_1(t) - i_2(t)\right] dt
+$$
 
-$$V_e(t) = R \, i_1(t) + L \frac{di_1(t)}{dt} + \frac{1}{\rm C} \int (i_1(t) - i_2(t)) \, dt$$
+$$
+\frac{1}{C} \int \left[i_1(t) - i_2(t)\right] dt = R_p\, i_2(t)
+$$
 
-$$\frac{1}{\rm C} \int (i_1(t) - i_2(t)) \, dt = R_p \, i_2(t)$$
-
-$$V_S = R_p \, i_2(t)$$
-## Modelo de Ecuaciones íntegro-diferenciales
-
-A partir del análisis del circuito RLC, las corrientes de malla y la salida se pueden expresar de la siguiente manera:
-
-$$i_1(t) = \frac{1}{R} \left[ V_e(t) - L \frac{di_1(t)}{dt} - R_p \, i_2(t) \right]$$
-
-$$i_2(t) = \frac{1}{R_p} \left[ \frac{1}{c} \int (i_1(t) - i_2(t)) \, dt \right]$$
-
-$$V_S(t) = R_p \, i_2(t)$$
-
-Donde $i_1(t)$ representa el flujo de aire o corriente de la malla izquierda asociada a las vías aéreas centrales y la inercia del gas, mientras que $i_2(t)$ representa la corriente de la malla derecha relacionada con la dinámica de la resistencia periférica y la distensibilidad pulmonar (compliancia) en los alvéolos.
-
-### Función de transferencia
-
-Sustituyendo estas relaciones en el modelo del circuito y aplicando la transformada de Laplace con condiciones iniciales cero, se obtiene la función de transferencia del sistema respiratorio:
-
-$$G(s) = \frac{V_S(s)}{V_e(s)} = \frac{R_p}{L \cdot C \cdot R_p \cdot s^2 + (L + R \cdot R_p \cdot C) \cdot s + (R + R_p)}$$
-
-## Error en estado estacionario
-
-El error en estado estacionario se define como la diferencia entre la entrada y la salida de un sistema cuando el límite en el tiempo tiende a infinito. Este análisis solo es útil para sistemas estables, por lo que primero se debe determinar la estabilidad del sistema. Para sistemas en lazo abierto ante una entrada escalón unitario $V_e(s) = \frac{1}{s}$, el error en estado estacionario está dado por:
-
-$$e(s) = \lim_{s \to 0} s \cdot V_e(s) \left[ 1 - G(s) \right]$$
-
-### Error en estado estacionario para el sistema de control
-
-#### Valores del sistema de control (Caso Control - Pulmón Sano)
-
-| Condición | R | $R_p$ | L | C |
-| :--- | :---: | :---: | :---: | :---: |
-| **Control: Pulmón sano** | $2\ \Omega$ | $1\ \Omega$ | $0.5\ \text{H}$ | $0.08\ \text{F}$ |
-
-Sustituyendo los valores en la función de transferencia:
-
-$$G(s) = \frac{1}{(0.5)(0.08)(1)s^2 + \left(0.5 + (2)(1)(0.08)\right)s + (2 + 1)}$$
-
-$$G(s) = \frac{1}{0.04s^2 + 0.66s + 3}$$
-
-Desarrollando analíticamente el límite para el error:
-
-$$e(s) = \lim_{s \to 0} s \left(\frac{1}{s}\right) \left[ 1 - \frac{R_p}{LCR_p s^2 + (L + RR_pC)s + (R + R_p)} \right]$$
-
-$$e(s) = 1 - \frac{R_p}{R + R_p} = \frac{R}{R + R_p} = \frac{2}{2 + 1} = \frac{2}{3} \approx 0.667$$
-
-Por lo tanto, el error en estado estacionario para el sistema de control es de **0.667**, lo que significa que la salida se estabiliza en un valor que es $\frac{1}{3}$ menor que la entrada.
-
-### Error en estado estacionario para el sistema patológico
-
-#### Valores del sistema patológico (Caso Asma - Enfermedad)
-
-| Condición | R | $R_p$ | L | C |
-| :--- | :---: | :---: | :---: | :---: |
-| **Caso: Asma (Enfermedad)** | $8\ \Omega$ | $12\ \Omega$ | $0.7\ \text{H}$ | $0.03\ \text{F}$ |
-
-Sustituyendo los valores en la función de transferencia:
-
-$$G(s) = \frac{12}{(0.7)(0.03)(12)s^2 + \left(0.7 + (8)(12)(0.03)\right)s + (8 + 12)}$$
-
-$$G(s) = \frac{12}{0.252s^2 + 3.58s + 20}$$
-
-Desarrollando analíticamente el límite para el error en el caso patológico:
-
-$$e(s) = \lim_{s \to 0} s \left(\frac{1}{s}\right) \left[ 1 - \frac{R_p}{LCR_p s^2 + (L + RR_pC)s + (R + R_p)} \right]$$
-
-$$e(s) = 1 - \frac{R_p}{R + R_p} = \frac{R}{R + R_p} = \frac{8}{8 + 12} = \frac{8}{20} = \frac{2}{5} = 0.4$$
-
-Por lo tanto, el error en estado estacionario para el sistema patológico es de **0.400**, lo que significa que la salida se ve afectada por la obstrucción pulmonar y se estabiliza en un valor menor que la entrada en menor proporción comparado con el caso control debido al drástico incremento de la resistencia periférica ($R_p$).
-
-## Estabilidad del sistema en lazo abierto
-
-Para analizar la estabilidad en lazo abierto se utiliza el denominador de la función de transferencia del sistema respiratorio:
-
-$$G(s) = \frac{R_p}{LCR_p s^2 + (L + RR_pC)s + (R + R_p)}$$
-
-Para determinar la estabilidad se calculan las raíces del denominador usando la fórmula general:
-
-$$\lambda_{1,2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
-
-Dónde los coeficientes dependen de los parámetros físicos del circuito:
-
-$$a = LCR_p$$
-
-$$b = L + RR_pC$$
-
-$$c = R + R_p$$
+$$
+V_s(t) = R_p\, i_2(t)
+$$
 
 ---
 
-### Estabilidad para el Control (Pulmón Sano)
+# Transformada de Laplace
 
-Utilizando los valores del control ($R = 2\ \Omega$, $R_p = 1\ \Omega$, $L = 0.5\ \text{H}$, $C = 0.08\ \text{F}$), los coeficientes son:
+$$
+V_e(s)=R\,I_1(s)+L\,s\,I_1(s)+\frac{I_1(s)-I_2(s)}{C\,s}
+$$
 
-$$a = (0.5)(0.08)(1) = 0.04$$
+$$
+\frac{I_1(s)-I_2(s)}{C\,s}=R_p\,I_2(s)
+$$
 
-$$b = 0.5 + (2)(1)(0.08) = 0.66$$
+$$
+V_s(s)=R_p\,I_2(s)
+$$
 
-$$c = 2 + 1 = 3$$
+---
 
-Sustituyendo en la ecuación cuadrática:
+# Desarrollo Algebraico
 
-$$\lambda_{1,2} = \frac{-0.66 \pm \sqrt{(0.66)^2 - 4(0.04)(3)}}{2(0.04)}$$
+## Factorizando el término de salida \(V_s(s)\)
 
-$$\lambda_{1,2} = \frac{-0.66 \pm \sqrt{0.4356 - 0.48}}{0.08} = \frac{-0.66 \pm \sqrt{-0.0444}}{0.08}$$
+$$
+V_e(s)=V_s(s)\left[\frac{(1+R_pCs)(Ls+R)}{R_p}+1\right]
+$$
 
-Calculando las raíces complejas conjugadas:
+## Realizando el producto de binomios
 
-$$\lambda_1 = -8.25 + 2.63j$$
+$$
+(1+R_pCs)(Ls+R)=Ls+R+R_pCLs^2+RR_pCs
+$$
 
-$$\lambda_2 = -8.25 - 2.63j$$
+## Sustituyendo y agrupando términos semejantes
 
-Por lo tanto, el sistema es **estable** dado que la parte real de ambas raíces es negativa ($\text{Re}(\lambda) = -8.25$). Al tener componentes imaginarias, el sistema presenta un comportamiento **subamortiguado**.
+$$
+V_e(s)=V_s(s)\left[\frac{R_pCLs^2+(L+RR_pC)s+R}{R_p}+1\right]
+$$
 
-### Estabilidad para el caso Patológico (Asma)
+$$
+V_e(s)=V_s(s)\left[\frac{R_pCLs^2+(L+RR_pC)s+R+R_p}{R_p}\right]
+$$
 
-Utilizando los valores del caso patológico debido a la enfermedad ($R = 8\ \Omega$, $R_p = 12\ \Omega$, $L = 0.7\ \text{H}$, $C = 0.03\ \text{F}$), evaluamos los nuevos coeficientes del denominador:
+---
 
-$$a = LCR_p = (0.7)(0.03)(12) = 0.252$$
+# Función de Transferencia
 
-$$b = L + RR_pC = 0.7 + (8)(12)(0.03) = 0.7 + 2.88 = 3.58$$
+$$
+\frac{V_s(s)}{V_e(s)}=
+\frac{R_p}
+{LCR_ps^2+(L+RR_pC)s+(R+R_p)}
+$$
 
-$$c = R + R_p = 8 + 12 = 20$$
+---
 
-Sustituyendo estos coeficientes en la ecuación cuadrática general para obtener los polos del sistema ($\lambda_{1,2}$):
+# Ecuaciones Integro-Diferenciales
 
-$$\lambda_{1,2} = \frac{-3.58 \pm \sqrt{(3.58)^2 - 4(0.252)(20)}}{2(0.252)}$$
+$$
+R\,i_1(t)=V_e(t)-L\frac{di_1(t)}{dt}-\frac{1}{C}\int \left[i_1(t)-i_2(t)\right]dt
+$$
 
-$$\lambda_{1,2} = \frac{-3.58 \pm \sqrt{12.8164 - 20.16}}{0.504}$$
+$$
+\frac{1}{C}\int \left[i_1(t)-i_2(t)\right]dt=R_p\,i_2(t)
+$$
 
-$$\lambda_{1,2} = \frac{-3.58 \pm \sqrt{-7.3436}}{0.504}$$
+$$
+R\,i_1(t)=V_e(t)-L\frac{di_1(t)}{dt}-R_p\,i_2(t)
+$$
 
-Calculando las raíces complejas conjugadas resultantes:
+---
 
-$$\lambda_1 = -7.10 + 5.38j$$
+# Error en Estado Estacionario
 
-$$\lambda_2 = -7.10 - 5.38j$$
+$$
+e_{ss}=\lim_{s\to0}sE(s)
+$$
+<div align="center">
+  
+| Caso Control | Caso (Asma) |
+|---|---|
+| $$e_{ss}=\frac{R_c}{R_c+R_p}$$ | $$e_{ss}=\frac{R_c}{R_c+R_p}$$ |
+| $$e_{ss}=\frac{1}{1.5}$$ | $$e_{ss}=\frac{8.5}{16}$$ |
+| $$e_{ss}=0.6667$$ | $$e_{ss}=0.33$$ |
+  
+</div>
+# Analisis de estabilidad
 
-Por lo tanto, el sistema patológico sigue siendo **estable** ya que la parte real de ambas raíces se mantiene en el semiplano izquierdo de Laplace ($\text{Re}(\lambda) = -7.10$). Debido a la presencia de la componente imaginaria provocada por los severos cambios de resistencia y compliancia del asma, el sistema mantiene un comportamiento **subamortiguado**, pero con una frecuencia de oscilación mayor y una respuesta transitoria modificada en comparación con el caso control.
+La ecuación característica del sistema es:
+
+$$
+(LCR_p)s^2 + (L + RR_pC)s + (R + R_p) = 0
+$$
+
+
+# Fórmula general
+
+$$
+\lambda_{1,2} =
+\frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+$$
+
+---
+<div align="center">
+
+| Parámetro | Caso Control | Caso Experimental |
+|---|---|---|
+| Raíces del sistema | $$\lambda_1 = -7.0437$$  $$\lambda_2 = -7.0437$$ | $$\lambda_1 = -8.25$$  $$\lambda_2 = -8.25$$ |
+| Tipo de raíces | Reales y negativas | Reales y negativas |
+| Estabilidad | Sistema estable | Sistema estable |
+| Comportamiento | Subamortiguado | Subamortiguado |
+| Error estacionario | $$e_{ss}=0.6$$ | $$e_{ss}=0.333$$ |
+</div>
+---
+
+## Conclusión
+
+En ambos casos el sistema es **estable**, ya que las raíces obtenidas son reales y negativas.  
+Además, el comportamiento del sistema es **subamortiguado**.  
+
+El caso experimental presenta un menor error en estado estacionario:
+
+$$
+e_{ss}=0.333
+$$
+
+lo que indica una mejor respuesta respecto al caso control.
+
+se concluye que la respuesta del sistema tiende al equilibrio conforme transcurre el tiempo, evitando oscilaciones crecientes o inestabilidad.
+
+El sistema presenta raíces reales negativas repetidas, lo cual indica un comportamiento sobreamortiguado y estable, representando adecuadamente la dinámica respiratoria del modelo propuesto.
+
 
 
 ## Lista de archivos incluidos en el repositorio
