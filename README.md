@@ -180,23 +180,7 @@ $$
 
 ---
 
-# Error en Estado Estacionario
 
-$$
-e_{ss}=\lim_{s\to0}sE(s)
-$$
-<div align="center">
-
-
-  
-| Caso Control | Caso (Asma) |
-|---|---|
-| $$e_{ss}=\frac{R_c}{R_c+R_p}$$ | $$e_{ss}=\frac{R_c}{R_c+R_p}$$ |
-| $$e_{ss}=\frac{1}{1.5}$$ | $$e_{ss}=\frac{8.5}{16}$$ |
-| $$e_{ss}=0.6667$$ | $$e_{ss}=0.33$$ |
-  
-</div>
-# Analisis de estabilidad
 
 # Coeficientes del Denominador
 
@@ -238,6 +222,23 @@ $$
 | Error estacionario | $$e_{ss}=0.6$$ | $$e_{ss}=0.333$$ |
 </div>
 ---
+# Error en Estado Estacionario
+
+$$
+e_{ss}=\lim_{s\to0}sE(s)
+$$
+<div align="center">
+
+
+  
+| Caso Control | Caso (Asma) |
+|---|---|
+| $$e_{ss}=\frac{R_c}{R_c+R_p}$$ | $$e_{ss}=\frac{R_c}{R_c+R_p}$$ |
+| $$e_{ss}=\frac{1}{1.5}$$ | $$e_{ss}=\frac{8.5}{16}$$ |
+| $$e_{ss}=0.6667$$ | $$e_{ss}=0.33$$ |
+  
+</div>
+# Analisis de estabilidad
 
 ## Conclusión
 
