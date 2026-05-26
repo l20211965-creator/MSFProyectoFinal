@@ -112,18 +112,19 @@ $$
 
 # Transformada de Laplace
 
+# Transformada de Laplace
+
 $$
-V_e(s)=R\,I_1(s)+L\s\I_1(s)+\frac{I_1(s)-I_2(s)}{C\,s}
+V_e(s)=R\,I_1(s)+L\,s\,I_1(s)+\frac{I_1(s)-I_2(s)}{C\,s}
 $$
 
 $$
-\frac{I_1(s)-I_2(s)}{C\s}=R_p\I_2(s)
+\frac{I_1(s)-I_2(s)}{C\,s}=R_p\,I_2(s)
 $$
 
 $$
-V_s(s)=R_p\I_2(s)
+V_s(s)=R_p\,I_2(s)
 $$
-
 ---
 
 # Desarrollo Algebraico
