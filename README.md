@@ -200,6 +200,12 @@ $$
 
 # Coeficientes del Denominador
 
+La ecuación característica del sistema es:
+
+$$
+(LCR_p)s^2 + (L + RR_pC)s + (R + R_p) = 0
+$$
+
 $$
 a=LCR_p
 $$
@@ -210,12 +216,6 @@ $$
 
 $$
 c=R+R_p
-$$
-
-La ecuación característica del sistema es:
-
-$$
-(LCR_p)s^2 + (L + RR_pC)s + (R + R_p) = 0
 $$
 
 
