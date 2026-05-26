@@ -216,7 +216,7 @@ $$
 | Parámetro | Caso Control | Caso Experimental |
 |---|---|---|
 | Raíces del sistema | $$\lambda_1 = -7.0437 + 5.4546j$$  $$\lambda_2 = -7.0437 - 5.4546j$$ | $$\lambda_1 = -8.25 + 2.63j$$  $$\lambda_2 = -8.25 - 2.63j$$ |
-| Tipo de raíces | negativas e imaginarias | negativas e imaginarias|
+| Tipo de raíces | complejas conjugadas | complejas conjugadas|
 | Estabilidad | Sistema estable | Sistema estable |
 | Comportamiento | Subamortiguado | Subamortiguado |
 | Error estacionario | $$e_{ss}=0.6$$ | $$e_{ss}=0.333$$ |
