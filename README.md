@@ -102,9 +102,9 @@ Las ecuaciones íntegro-diferenciales que describen el comportamiento del circui
 
 ### Ecuación principal
 
-$$V_e(t) = R \, i_1(t) + L \frac{di_1(t)}{dt} + \frac{1}{\,C} \int (i_1(t) - i_2(t)) \, dt$$
+$$V_e(t) = R \, i_1(t) + L \frac{di_1(t)}{dt} + \frac{1}{\c} \int (i_1(t) - i_2(t)) \, dt$$
 
-$$\frac{1}{\,C} \int (i_1(t) - i_2(t)) \, dt = R_p \, i_2(t)$$
+$$\frac{1}{\c} \int (i_1(t) - i_2(t)) \, dt = R_p \, i_2(t)$$
 
 $$V_S = R_p \, i_2(t)$$
 ## Modelo de Ecuaciones íntegro-diferenciales
@@ -113,7 +113,7 @@ A partir del análisis del circuito RLC, las corrientes de malla y la salida se 
 
 $$i_1(t) = \frac{1}{R} \left[ V_e(t) - L \frac{di_1(t)}{dt} - R_p \, i_2(t) \right]$$
 
-$$i_2(t) = \frac{1}{R_p} \left[ \frac{1}{C} \int (i_1(t) - i_2(t)) \, dt \right]$$
+$$i_2(t) = \frac{1}{R_p} \left[ \frac{1}{c} \int (i_1(t) - i_2(t)) \, dt \right]$$
 
 $$V_S(t) = R_p \, i_2(t)$$
 
