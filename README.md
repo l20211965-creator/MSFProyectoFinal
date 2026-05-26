@@ -97,19 +97,7 @@ Se calculó de forma analítica la función de transferencia, el error en estado
 
 
 ### Ecuación principal
-
-$$
-i_1(t)=\frac{V_e(t)-L\frac{di_1(t)}{dt}-\frac{1}{C}\int\left(i_1(t)-i_2(t)\right)\,dt}{R}
-$$
-
-$$
-i_2(t)=\frac{\frac{1}{C}\int\left(i_1(t)-i_2(t)\right)\,dt}{R_p}
-$$
-
-$$
-V_S(t)=R_p\,i_2(t)
-$$
-
+$$V_e(t) = R \, i_1(t) + L \frac{di_1(t)}{dt} + \frac{1}{c} \int (i_1(t) - i_2(t)) \, dt$$ $$ \frac{1}{C} \int (i_1(t) - i_2(t)) \, dt = R_p \, i_2(t)$$ $$ $$V_S = R_p \, i_2(t)$$ ## Modelo de Ecuaciones íntegro-diferenciales
 
 ## Modelo de Ecuaciones íntegro-diferenciales
 
