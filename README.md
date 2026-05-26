@@ -98,14 +98,15 @@ Se calculó de forma analítica la función de transferencia, el error en estado
 
 Las ecuaciones íntegro-diferenciales que describen el comportamiento del circuito RLC análogo al sistema respiratorio son:
 
+
+
 ### Ecuación principal
 
-$$V_e(t) = R1 \, i_1(t) + L \frac{di_1(t)}{dt} + \frac{1}{\mathrm{C1}} \int (i_1(t) - i_2(t)) \, dt$$
+$$V_e(t) = R \, i_1(t) + L \frac{di_1(t)}{dt} + \frac{1}{\,C} \int (i_1(t) - i_2(t)) \, dt$$
 
-$$\frac{1}{\mathrm{C }} \int (i_1(t) - i_2(t)) \, dt = R_p2 \, i_2(t)$$
+$$\frac{1}{\,C} \int (i_1(t) - i_2(t)) \, dt = R_p \, i_2(t)$$
 
-$$V_S = R_p2\, i_2(t)$$
-
+$$V_S = R_p \, i_2(t)$$
 ## Modelo de Ecuaciones íntegro-diferenciales
 
 A partir del análisis del circuito RLC, las corrientes de malla y la salida se pueden expresar de la siguiente manera:
