@@ -129,7 +129,7 @@ $$
 
 # Desarrollo Algebraico
 
-## Factorizando el término de salida \(V_s(s)\)
+## Factorizando el término de salida \(Vs(s)\)
 
 $$
 V_e(s)=V_s(s)\left[\frac{(1+R_pCs)(Ls+R)}{R_p}+1\right]
