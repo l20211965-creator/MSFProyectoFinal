@@ -94,11 +94,15 @@ distribución Is(t), asociado a la respuesta respiratoria efectiva en los pulmon
 
 Se calculó de forma analítica la función de transferencia, el error en estado estacionario y el modelo de ecuaciones íntegro-diferenciales. Además, se consideran la estabilidad en lazo abierto para el caso control y el caso patológico (Asma).
 
-
-
 ### Ecuación principal
-$$V_e(t) = R \, i_1(t) + L \frac{di_1(t)}{dt} + \frac{1}{c} \int (i_1(t) - i_2(t)) \, dt$$ $$ \frac{1}{C} \int (i_1(t) - i_2(t)) \, dt = R_p \, i_2(t)$$ $$ $$V_S = R_p \, i_2(t)$$ ## Modelo de Ecuaciones íntegro-diferenciales
 
+$$\frac{V_S(s)}{V_e(s)} = \frac{s^2 + s}{as^2 + bs + c}$$
+
+$$V_e(t) = R \, i_1(t) + L \frac{di_1(t)}{dt} + \frac{1}{\rm C} \int (i_1(t) - i_2(t)) \, dt$$
+
+$$\frac{1}{\rm C} \int (i_1(t) - i_2(t)) \, dt = R_p \, i_2(t)$$
+
+$$V_S = R_p \, i_2(t)$$
 ## Modelo de Ecuaciones íntegro-diferenciales
 
 A partir del análisis del circuito RLC, las corrientes de malla y la salida se pueden expresar de la siguiente manera:
